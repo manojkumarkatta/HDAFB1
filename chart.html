@@ -1,0 +1,69 @@
+<html>
+
+<style type="text/css">
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+</style>
+<body>
+<div class="chart"> </div>
+</body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script text="text/javascript">
+window.onload = function(e){
+//var data = [12, 32, 152, 253, 321, 378];
+
+var data = [
+        {label:"Uttar Pradesh", value:16.49},
+        {label:"Maharashtra", value:9.28},
+        {label:"Bihar", value:8.58},
+        {label:"West Bengal", value:7.55},
+        {label:"Madhya Pradesh", value:6},
+        {label:"Tamil Nadu", value:5.96},
+        {label:"Rajasthan", value:5.67},
+        {label:"Karnataka", value:5.05},
+        {label:"Gujarat", value:5},
+        {label:"Andhra Pradesh", value:4.08},
+        {label:"Odisha", value:3.47},
+        {label:"Telangana", value:2.97},
+        {label:"Kerala", value:2.76},
+        {label:"Jharkhand", value:2.72},
+        {label:"Assam", value:2.58},
+        {label:"Punjab", value:2.3},
+        {label:"Chhattisgarh", value:2.11},
+        {label:"Haryana", value:2.09},
+        {label:"Jammu and Kashmir", value:1.04},
+        {label:"Uttarakhand", value:0.84},
+        {label:"Himachal Pradesh", value:0.57},
+        {label:"Tripura", value:0.3},
+        {label:"Meghalaya", value:0.24},
+        {label:"Manipur", value:0.22},
+        {label:"Nagaland", value:0.16},
+        {label:"Goa", value:0.12},
+        {label:"Arunachal Pradesh", value:0.11},
+        {label:"Mizoram", value:0.09},
+        {label:"Sikkim", value:0.05},
+        {label:"Delhi", value:1.38},
+        {label:"Puducherry", value:0.1},
+        {label:"Chandigarh", value:0.09},
+        {label:"Andaman and Nicobar Islands", value:0.03},
+        {label:"Dadra and Nagar Haveli", value:0.03},
+        {label:"Daman and Diu", value:0.02},
+        {label:"Lakshadweep", value:0.01}
+];
+d3.select(".chart")
+  .selectAll("div")
+  .data(data)
+    .enter()
+    .append("div")
+    .style("width", function(d) { return d.value + "%"; })
+    .text(function(d) { return d.label; });
+}
+</script>
+
+</html>
