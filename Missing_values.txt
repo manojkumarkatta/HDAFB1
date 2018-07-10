@@ -1,0 +1,6 @@
+1.deleteing the observations, in a large dataset, where all the classes to be predicted are sufficiently represented in training data, delete those rows that contain missing values.
+Delete only if:
+i)have sufficient data points, so that data isnt skewed
+ii)dont delete to create bias
+2. Imputation with mean/median/mode
+3.Assumeing/Guessing what the missing data might be.this gets easier with experience.    
